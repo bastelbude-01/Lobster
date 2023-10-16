@@ -4,10 +4,7 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
-
-    return LaunchDescription([
-
-        Node(
+    color = Node(
             package='v4l2_camera',
             executable='v4l2_camera_node',
             output='screen',
@@ -17,9 +14,13 @@ def generate_launch_description():
                 }]
         )
 
-        #Node(
-        #    package='pi_rover',
-        #    executable='image_publisher',
-        #)
+    BW= Node(
+            package='pi_rover',
+            executable='image_publisher',
+        )
+
+    return LaunchDescription([
+
+    BW        
         
     ])
