@@ -15,7 +15,7 @@ if(BUILD_TESTING)
 endif()
 
 install(
-  DIRECTORY urdf rviz launch worlds config meshes
+  DIRECTORY urdf rviz launch config meshes
   DESTINATION share/${PROJECT_NAME}
 )
 
