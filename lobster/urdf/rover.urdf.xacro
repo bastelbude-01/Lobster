@@ -3,8 +3,8 @@
 
     <xacro:include filename="material.xacro"/>
 
-    <xacro:include filename="rover_chassi.xacro"/>
+    <xacro:include filename="lobster_chassi.xacro"/>
 
-    <xacro:include filename="rover_body_n.xacro"/>
+    <xacro:include filename="lobster_body.xacro"/>
     
 </robot>

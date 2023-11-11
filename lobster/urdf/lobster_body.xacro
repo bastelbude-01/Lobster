@@ -7,7 +7,7 @@
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="package://test_pkg/meshes/meshes_Homebot/body/LowerCover-Part1.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/LowerCover-Part1.stl" scale="${scale}"/>
             </geometry>
             <material name="red"/>
         </visual>
@@ -26,7 +26,7 @@
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="package://test_pkg/meshes/meshes_Homebot/body/LowerCover-Part2.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/LowerCover-Part2.stl" scale="${scale}"/>
             </geometry>
             <material name="red"/>
         </visual>
@@ -45,7 +45,7 @@
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="package://test_pkg/meshes/meshes_Homebot/body/LowerCover-Part3.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/LowerCover-Part3.stl" scale="${scale}"/>
             </geometry>
             <material name="red"/>
         </visual>
@@ -64,7 +64,7 @@
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="package://test_pkg/meshes/meshes_Homebot/body/LowerCover-Part4.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/LowerCover-Part4.stl" scale="${scale}"/>
             </geometry>
             <material name="red"/>
         </visual>
@@ -82,7 +82,7 @@
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 ${PI}" />
             <geometry>
                 <mesh
-                    filename="package://test_pkg/meshes/meshes_Homebot/body/UpperCover-Face-Part1.stl"
+                    filename="package://lobster/meshes/body/UpperCover-Face-Part1.stl"
                     scale="${scale}" />
             </geometry>
             <material name="black" />
@@ -101,7 +101,7 @@
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="package://test_pkg/meshes/meshes_Homebot/body/UpperCover-Part2.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/UpperCover-Part2.stl" scale="${scale}"/>
             </geometry>
             <material name="red"/>
         </visual>
@@ -118,7 +118,7 @@
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="package://test_pkg/meshes/meshes_Homebot/body/Upper_Cover-With_Servo-Part3.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/Upper_Cover-With_Servo-Part3.stl" scale="${scale}"/>
             </geometry>
             <material name="red"/>
         </visual>
@@ -135,7 +135,7 @@
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="package://test_pkg/meshes/meshes_Homebot/body/Upper_Cover-With_Servo-Part4.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/Upper_Cover-With_Servo-Part4.stl" scale="${scale}"/>
             </geometry>
             <material name="red"/>
         </visual>
@@ -153,7 +153,7 @@
             <origin xyz="0.0 0.0 0.0" rpy="0.0 ${PI} 0.0" />
             <geometry>
                 <mesh
-                    filename="package://test_pkg/meshes/meshes_Homebot/body/LidarTopPlate.stl"
+                    filename="package://lobster/meshes/body/LidarTopPlate.stl"
                     scale="${scale}" />
             </geometry>
             <material name="red" />

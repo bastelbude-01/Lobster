@@ -9,7 +9,7 @@
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 ${-PI/2}"/>            
             <geometry>
-                <mesh filename="package://test_pkg/meshes/meshes_Homebot/body/BasePlateHorizontal.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/BasePlateHorizontal.stl" scale="${scale}"/>
             </geometry>
             <material name="blue"/>
         </visual>
@@ -25,7 +25,7 @@
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="package://test_pkg/meshes/meshes_Homebot/body/wheel.dae" scale="0.5 0.5 0.5"/>
+                <mesh filename="package://lobster/meshes/body/wheel.dae" scale="0.5 0.5 0.5"/>
             </geometry>
         </visual>
         
@@ -42,17 +42,34 @@
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 ${PI}"/>
             <geometry>
-                <mesh filename="package://test_pkg/meshes/meshes_Homebot/body/wheel.dae" scale="0.5 0.5 0.5"/>
+                <mesh filename="package://lobster/meshes/body/wheel.dae" scale="0.5 0.5 0.5"/>
             </geometry>
         </visual>
         
     </link> 
 
-    <joint name="right_wheel_joint" type="continuous">
+    <joint name="joint_1" type="continuous">
         <parent link="base_link"/>
         <child link="right_wheel"/>
         <axis xyz="0 1 0"/>
         <origin xyz="0 -0.12 0.02" rpy="0 0 0"/>
+    </joint>
+
+    <link name="left_wheel">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://lobster/meshes/body/wheel.dae" scale="0.5 0.5 0.5"/>
+            </geometry>
+        </visual>
+        
+    </link> 
+
+    <joint name="joint_2" type="continuous">
+        <parent link="base_link"/>
+        <child link="left_wheel"/>
+        <axis xyz="0 1 0"/>
+        <origin xyz="0 0.12 0.02" rpy="0 0 0"/>
     </joint>
 
     <link name="caster_wheel_front">
