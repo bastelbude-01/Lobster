@@ -29,6 +29,19 @@
         <color rgba="1 1 0 1"/>
     </material>
 
+    <xacro:property name="PI" value="3.14159" />
+    <xacro:property name="effort" value="30.0" />
+    <xacro:property name="velocity" value="10.0" />
+
+    <xacro:macro name="default_inertial" params="mass"> <!-- <xacro:default_inertial mass="1"/> -->
+        <inertial>
+            <mass value="${mass}" />
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0"
+                     iyy="1.0" iyz="0.0"
+                     izz="1.0" />
+        </inertial>
+    </xacro:macro>
+
     <xacro:macro name="box_inertia" params="m l w h xyz rpy">
         <inertial>
             <origin xyz="${xyz}" rpy="${rpy}" />
@@ -38,6 +51,7 @@
                      izz="${(m/12) * (w*w + h*h)}" />
         </inertial>
     </xacro:macro>
+    
     <!-- 
         <xacro:box_inertia m="" l="" w="" h=""
                            xyz="0 0 0" rpy="0 0 0"/> 

@@ -2,79 +2,101 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <xacro:property name="scale" value="0.001 0.001 0.001" />
-    
+
     <link name="body_1">
         <visual>
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://lobster/meshes/body/LowerCover-Part1.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/LowerCover-Part1.stl" scale="${scale}" />
             </geometry>
-            <material name="red"/>
+            <material name="red" />
         </visual>
-        
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://lobster/meshes/body/LowerCover-Part1.stl" scale="${scale}" />
+            </geometry>
+        </collision>
+        <xacro:default_inertial mass="1" />
     </link>
 
     <joint name="lower_body_1" type="fixed">
-        <parent link="base_link"/>
-        <child link="body_1"/>
-        <origin xyz="-0.043 0.046 0.0" rpy="0.0 0.0 ${PI/2}"/>
+        <parent link="base_link" />
+        <child link="body_1" />
+        <origin xyz="-0.043 0.046 0.0" rpy="0.0 0.0 ${PI/2}" />
     </joint>
-    
 
- 
+
     <link name="body_2">
         <visual>
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://lobster/meshes/body/LowerCover-Part2.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/LowerCover-Part2.stl" scale="${scale}" />
             </geometry>
-            <material name="red"/>
+            <material name="red" />
         </visual>
-        
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://lobster/meshes/body/LowerCover-Part2.stl" scale="${scale}" />
+            </geometry>
+        </collision>
+        <xacro:default_inertial mass="1" />
     </link>
 
     <joint name="lower_body_2" type="fixed">
-        <parent link="base_link"/>
-        <child link="body_2"/>
-        <origin xyz="-0.043 0.046 0" rpy="0.0 0.0 ${PI/2}"/> 
+        <parent link="base_link" />
+        <child link="body_2" />
+        <origin xyz="-0.043 0.046 0" rpy="0.0 0.0 ${PI/2}" />
     </joint>
-
 
 
     <link name="body_3">
         <visual>
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://lobster/meshes/body/LowerCover-Part3.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/LowerCover-Part3.stl" scale="${scale}" />
             </geometry>
-            <material name="red"/>
+            <material name="red" />
         </visual>
-        
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://lobster/meshes/body/LowerCover-Part3.stl" scale="${scale}" />
+            </geometry>
+        </collision>
+
+        <xacro:default_inertial mass="1" />
     </link>
 
     <joint name="lower_body_3" type="fixed">
-        <parent link="base_link"/>
-        <child link="body_3"/>
-        <origin xyz="-0.043 0.046 0" rpy="0.0 0.0 ${PI/2}"/> 
+        <parent link="base_link" />
+        <child link="body_3" />
+        <origin xyz="-0.043 0.046 0" rpy="0.0 0.0 ${PI/2}" />
     </joint>
 
-    
 
     <link name="body_4">
         <visual>
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://lobster/meshes/body/LowerCover-Part4.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/LowerCover-Part4.stl" scale="${scale}" />
             </geometry>
-            <material name="red"/>
+            <material name="red" />
         </visual>
-        
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://lobster/meshes/body/LowerCover-Part4.stl" scale="${scale}" />
+            </geometry>
+        </collision>
+        <xacro:default_inertial mass="1" />
     </link>
 
     <joint name="lower_body_4" type="fixed">
-        <parent link="base_link"/>
-        <child link="body_4"/>
-        <origin xyz="-0.043 0.046 0" rpy="0.0 0.0 ${PI/2}"/> <!-- -0.043 0.046 0 -->
+        <parent link="base_link" />
+        <child link="body_4" />
+        <origin xyz="-0.043 0.046 0" rpy="0.0 0.0 ${PI/2}" /> <!-- -0.043 0.046 0 -->
     </joint>
 
     <link name="body_5">
@@ -87,7 +109,15 @@
             </geometry>
             <material name="black" />
         </visual>
-
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 ${PI}" />
+            <geometry>
+                <mesh
+                    filename="package://lobster/meshes/body/UpperCover-Face-Part1.stl"
+                    scale="${scale}" />
+            </geometry>
+        </collision>
+        <xacro:default_inertial mass="1" />
     </link>
 
     <joint name="lower_body_5"
@@ -99,52 +129,74 @@
 
     <link name="body_6">
         <visual>
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://lobster/meshes/body/UpperCover-Part2.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/UpperCover-Part2.stl" scale="${scale}" />
             </geometry>
-            <material name="red"/>
+            <material name="red" />
         </visual>
-        
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://lobster/meshes/body/UpperCover-Part2.stl" scale="${scale}" />
+            </geometry>
+        </collision>
+        <xacro:default_inertial mass="1" />
     </link>
 
     <joint name="lower_body_6" type="fixed">
-        <parent link="base_link"/>
-        <child link="body_6"/>
+        <parent link="base_link" />
+        <child link="body_6" />
         <origin xyz="0.04 0 0.16" rpy="0.0 0.0 ${PI}" />
     </joint>
 
     <link name="body_7">
         <visual>
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://lobster/meshes/body/Upper_Cover-With_Servo-Part3.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/Upper_Cover-With_Servo-Part3.stl"
+                    scale="${scale}" />
             </geometry>
-            <material name="red"/>
+            <material name="red" />
         </visual>
-        
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://lobster/meshes/body/Upper_Cover-With_Servo-Part3.stl"
+                    scale="${scale}" />
+            </geometry>
+        </collision>
+        <xacro:default_inertial mass="1" />
     </link>
 
     <joint name="lower_body_7" type="fixed">
-        <parent link="base_link"/>
-        <child link="body_7"/>
+        <parent link="base_link" />
+        <child link="body_7" />
         <origin xyz="0.04 0 0.16" rpy="0.0 0.0 ${PI}" />
     </joint>
 
     <link name="body_8">
         <visual>
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://lobster/meshes/body/Upper_Cover-With_Servo-Part4.stl" scale="${scale}"/>
+                <mesh filename="package://lobster/meshes/body/Upper_Cover-With_Servo-Part4.stl"
+                    scale="${scale}" />
             </geometry>
-            <material name="red"/>
+            <material name="red" />
         </visual>
-        
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://lobster/meshes/body/Upper_Cover-With_Servo-Part4.stl"
+                    scale="${scale}" />
+            </geometry>
+        </collision>
+        <xacro:default_inertial mass="1" />
     </link>
 
     <joint name="lower_body_8" type="fixed">
-        <parent link="base_link"/>
-        <child link="body_8"/>
+        <parent link="base_link" />
+        <child link="body_8" />
         <origin xyz="0.04 0 0.16" rpy="0.0 0.0 ${PI}" />
     </joint>
 
@@ -158,7 +210,15 @@
             </geometry>
             <material name="red" />
         </visual>
-
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 ${PI} 0.0" />
+            <geometry>
+                <mesh
+                    filename="package://lobster/meshes/body/LidarTopPlate.stl"
+                    scale="${scale}" />
+            </geometry>
+        </collision>
+        <xacro:default_inertial mass="1" />
     </link>
 
     <joint name="lower_body_top"
@@ -166,8 +226,7 @@
         <parent link="base_link" />
         <child link="body_top" />
         <origin xyz="0 0 0.343" rpy="0.0 0.0 ${PI/2}" />
-    </joint> 
-
+    </joint>
 
 
 </robot>
